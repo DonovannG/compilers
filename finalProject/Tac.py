@@ -167,11 +167,10 @@ def whileBlockGenerator(node,tmp,temp,j):
             x=x+("T"+str(tmpC-1)+" IFGOTO L"+str(tmpB-1)+"\n")
             tmpC=tmpA
             tmpBG=tmpB
-
-
     x=x+"T"+str(j-1)+" IFGOTO L"+str(tmpBG)+"\n"
     blockList.append(x)
     return tmpC+1,tmpBG+1
+
 
 def forBlockGenerator(node,tmp,temp,j,step,compar):
     tmpC=tmp

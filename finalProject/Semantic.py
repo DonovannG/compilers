@@ -1,5 +1,5 @@
-from Parser import Node, absTree, names, parseText
-from copy import deepcopy
+from Parser import Node, names, parseText
+from copy import *
 
 class SymbolTable:
     vars=dict({})
@@ -11,7 +11,6 @@ class SymbolTable:
         self.ancestor=ancestor
         self.blk=blk
         self.vars=deepcopy(dict({}))
-
 
     def printInfo(self):
         print("id: ",self.id)
@@ -115,7 +114,7 @@ def checkVar(var,scope):
 
 #Implementing the tree inside de file, sorry
 res=None
-def generateTestTree():
+def treeGenerator():
     res = Node("Start","Start")
     decInt=Node("assign","=",[Node("a","INT",var=True),Node("2","INT")])
     res.childrens.append(decInt)
@@ -141,9 +140,8 @@ def generateTestTree():
 
     return res
      
-res=generateTestTree()
+res=treeGenerator()
 #parseText("Example.txt")
-#res=absTree
 
 setScopes(res,None)
 for count in symTable:
