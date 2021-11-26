@@ -1,0 +1,17 @@
+int a = 2
+float b = 3
+string c = "tree"
+if(a<2){
+    print(b)
+}elif(a>2){
+    boolean d = true
+}else{
+    print(c)
+}
+int i
+for(i;i<5;a++){
+    print(a);
+}
+while(a!=2){
+    print(true);
+}

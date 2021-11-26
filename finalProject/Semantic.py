@@ -3,9 +3,9 @@ from copy import deepcopy
 
 class SymbolTable:
     vars=dict({})
-    id=''
     ancestor=None
     blk=0
+    id=''
     def __init__(self,id,blk,ancestor=None):
         self.id=id
         self.ancestor=ancestor
@@ -142,6 +142,8 @@ def generateTestTree():
     return res
      
 res=generateTestTree()
+#parseText("Example.txt")
+#res=absTree
 
 setScopes(res,None)
 for count in symTable:
